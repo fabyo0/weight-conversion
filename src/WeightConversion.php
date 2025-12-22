@@ -2,6 +2,4 @@
 
 namespace Fabyo\WeightConversion;
 
-class WeightConversion
-{
-}
+class WeightConversion {}
