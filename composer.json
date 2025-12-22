@@ -1,5 +1,5 @@
 {
-    "name": ":vendor_slug/:package_slug",
+    "name": "fabyo0/weight-conversion",
     "description": "A simple and flexible weight conversion package for PHP",
     "keywords": [
         "weight-conversion",
@@ -10,7 +10,7 @@
         "gram",
         "pound"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/fabyo0/weight-conversion",
     "license": "MIT",
     "authors": [
         {
@@ -28,12 +28,12 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src"
+            "Fabyo0\\WeightConversion\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Fabyo0\\WeightConversion\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -42,7 +42,7 @@
     "config": {
         "sort-packages": true,
         "allow-plugins": {
-            "phpstan/extension-installer": true
+            "pestphp/pest-plugin": true
         }
     },
     "minimum-stability": "dev",
