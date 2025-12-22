@@ -1,25 +1,29 @@
 {
     "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "description": "A simple and flexible weight conversion package for PHP",
     "keywords": [
-        ":vendor_name",
-        ":package_slug"
+        "weight-conversion",
+        "weight",
+        "converter",
+        "unit-conversion",
+        "kilogram",
+        "gram",
+        "pound"
     ],
     "homepage": "https://github.com/:vendor_slug/:package_slug",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Emre Dikmen",
+            "email": "emredikmen002@gmail.com",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^8.4"
+        "php": "^8.2"
     },
     "require-dev": {
-        :require_dev_testing,
-        :require_dev_codestyle,
+        "pestphp/pest": "^3.0",
         "spatie/ray": "^1.28"
     },
     "autoload": {
@@ -33,13 +37,11 @@
         }
     },
     "scripts": {
-        :scripts_testing,
-        :scripts_codestyle
+        "test": "vendor/bin/pest"
     },
     "config": {
         "sort-packages": true,
         "allow-plugins": {
-            :plugins_testing,
             "phpstan/extension-installer": true
         }
     },
