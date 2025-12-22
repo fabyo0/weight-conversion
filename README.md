@@ -15,18 +15,16 @@ composer require fabyo0/weight-conversion
 
 ## Usage
 ```php
-use Fabyo0\WeightConversion\WeightConverter;
+use Fabyo0\WeightConversion\WeightConversion;
 
 // Create a converter with kilograms
-$weight = new WeightConverter(100, 'kg');
+$weight = new WeightConversion(100, 'kg');
 
 // Convert to different units
 $weight->toGrams();     // 100000
 $weight->toPounds();    // 220.462
 $weight->toOunces();    // 3527.396
 
-// Or use the static method
-WeightConverter::from(5, 'kg')->toPounds(); // 11.023
 ```
 
 ## Supported Units
