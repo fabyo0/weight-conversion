@@ -21,17 +21,16 @@ class WeightConversion
     private float $valueGrams;
 
     public function __construct(
-        private readonly float  $value,
+        private readonly float $value,
         private readonly string $unit = 'kg'
-    )
-    {
+    ) {
         $this->validateUnit($unit);
         $this->valueInGrams = $this->value * self::UNITS[$this->unit];
     }
 
     private function validateUnit(string $unit): void
     {
-        if (!array_key_exists($unit, self::UNITS)) {
+        if (! array_key_exists($unit, self::UNITS)) {
             throw new \InvalidArgumentException("Unsupported unit: {$unit}");
         }
     }
