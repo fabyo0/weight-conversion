@@ -1,6 +1,6 @@
 <?php
 
-namespace Fabyo\WeightConversion;
+namespace Fabyo0\WeightConversion;
 
 class WeightConversion
 {
