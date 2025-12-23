@@ -162,7 +162,6 @@ test('compares different units correctly', function () {
     expect($weight1->isGreaterThan($weight2))->toBeTrue();
 });
 
-
 test('returns original value with getValue', function () {
     $weight = new WeightConversion(75.5, 'kg');
 
