@@ -97,7 +97,7 @@ class WeightConversion
 
     public function format(int $decimals = 2): string
     {
-        return number_format($this->value, $decimals) . ' ' . $this->unit;
+        return number_format($this->value, $decimals).' '.$this->unit;
     }
 
     public function add(float $value, string $unit = 'kg'): self
@@ -147,7 +147,7 @@ class WeightConversion
 
     private function validateUnit(string $unit): void
     {
-        if (!array_key_exists($unit, self::UNITS)) {
+        if (! array_key_exists($unit, self::UNITS)) {
             $supported = implode(', ', array_keys(self::UNITS));
             throw new \InvalidArgumentException(
                 "Unsupported unit: {$unit}. Supported units: {$supported}"
