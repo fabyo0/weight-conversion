@@ -6,6 +6,8 @@
 
 A simple and flexible weight conversion package for PHP. Convert between kilograms, grams, pounds, ounces and more with ease.
 
+> **Note:** This package was developed as a learning project, following the [Spatie Laravel Package Training](https://laravelpackage.training) course as a reference.
+
 ## Installation
 
 You can install the package via composer:
@@ -15,18 +17,30 @@ composer require fabyo0/weight-conversion
 
 ## Usage
 ```php
-use Fabyo0\WeightConversion\WeightConverter;
+use Fabyo0\WeightConversion\WeightConversion;
 
-// Create a converter with kilograms
-$weight = new WeightConverter(100, 'kg');
+// Static factory methods
+$weight = WeightConversion::fromKilograms(100);
+$weight = WeightConversion::fromPounds(220);
 
-// Convert to different units
-$weight->toGrams();     // 100000
-$weight->toPounds();    // 220.462
-$weight->toOunces();    // 3527.396
+// Method chaining
+$total = WeightConversion::fromKilograms(50)
+    ->add(25, 'kg')
+    ->subtract(10, 'lb')
+    ->toKilograms();
 
-// Or use the static method
-WeightConverter::from(5, 'kg')->toPounds(); // 11.023
+// Comparison methods
+$weight1 = WeightConversion::fromKilograms(100);
+$weight2 = WeightConversion::fromPounds(220);
+
+$weight1->isGreaterThan($weight2); // true/false
+
+// Formatting output
+$weight = new WeightConversion(75.5, 'kg');
+echo $weight->format(2); // "75.50 kg"
+
+// Get supported units
+WeightConversion::getSupportedUnits(); // ['kg', 'g', 'mg', 'lb', 'oz', 't']
 ```
 
 ## Supported Units
